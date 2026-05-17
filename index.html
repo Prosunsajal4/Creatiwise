@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom & Petal — Premium Florist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Bloom & Petal</a>
+            <ul class="nav-links">
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Occasions</a></li>
+                <li><a href="#">Subscriptions</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="icon-btn" aria-label="Search">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                </button>
+                <button class="icon-btn" aria-label="Account">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+                <button class="icon-btn cart-btn" aria-label="Cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="cart-count">2</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-tagline">Handcrafted with Love</span>
+                <h1>Beautiful Flowers<br>for Every <span class="accent">Moment</span></h1>
+                <p>Fresh, premium blooms delivered to your door. Each arrangement is thoughtfully designed to bring joy and elegance to any occasion.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary">Shop Collection</a>
+                    <a href="#" class="btn btn-secondary">Send a Gift</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <div class="hero-placeholder">
+                        <svg viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="500" fill="#F5EBE0"/>
+                            <circle cx="200" cy="200" r="80" fill="#E8D5C4"/>
+                            <circle cx="150" cy="180" r="50" fill="#D4A574"/>
+                            <circle cx="250" cy="180" r="50" fill="#C9B1A0"/>
+                            <circle cx="200" cy="150" r="45" fill="#B8846A"/>
+                            <circle cx="170" cy="220" r="40" fill="#E8C4A8"/>
+                            <circle cx="230" cy="220" r="40" fill="#D4A574"/>
+                            <path d="M180 280 Q200 350 220 280" stroke="#8B6F47" stroke-width="3" fill="none"/>
+                            <path d="M160 290 Q180 380 200 290" stroke="#8B6F47" stroke-width="3" fill="none"/>
+                            <path d="M200 290 Q220 380 240 290" stroke="#8B6F47" stroke-width="3" fill="none"/>
+                            <ellipse cx="140" cy="320" rx="25" ry="15" fill="#A8C5A0" transform="rotate(-30 140 320)"/>
+                            <ellipse cx="260" cy="310" rx="25" ry="15" fill="#A8C5A0" transform="rotate(30 260 310)"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="hero-badge">
+                    <span class="badge-icon">✦</span>
+                    <span>Same Day Delivery</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Occasion-Based Categories -->
+    <section class="categories">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Shop by Occasion</span>
+                <h2>Flowers for Every <span class="accent">Celebration</span></h2>
+            </div>
+            <div class="categories-grid">
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #FFE5E5 0%, #FFB3B3 100%);">
+                        <span class="category-icon">💐</span>
+                    </div>
+                    <h3>Birthday</h3>
+                    <p>Celebrate their special day</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #FFE5F0 0%, #FFB3D9 100%);">
+                        <span class="category-icon">💕</span>
+                    </div>
+                    <h3>Anniversary</h3>
+                    <p>Express your timeless love</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);">
+                        <span class="category-icon">🌿</span>
+                    </div>
+                    <h3>Sympathy</h3>
+                    <p>Comfort in every petal</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);">
+                        <span class="category-icon">🎉</span>
+                    </div>
+                    <h3>Congratulations</h3>
+                    <p>Mark their achievements</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);">
+                        <span class="category-icon">💝</span>
+                    </div>
+                    <h3>Just Because</h3>
+                    <p>No reason needed</p>
+                </a>
+                <a href="#" class="category-card">
+                    <div class="category-image" style="background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);">
+                        <span class="category-icon">👶</span>
+                    </div>
+                    <h3>New Baby</h3>
+                    <p>Welcome the little one</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Curated for You</span>
+                <h2>Featured <span class="accent">Collections</span></h2>
+                <a href="#" class="view-all">View All →</a>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FFF5EE 0%, #FFE4D6 100%);">
+                        <div class="product-badge">Bestseller</div>
+                        <svg viewBox="0 0 300 350" class="product-svg">
+                            <circle cx="150" cy="140" r="60" fill="#FFB6C1"/>
+                            <circle cx="120" cy="120" r="40" fill="#FF69B4"/>
+                            <circle cx="180" cy="120" r="40" fill="#FFB6C1"/>
+                            <circle cx="150" cy="100" r="35" fill="#FF1493"/>
+                            <circle cx="130" cy="160" r="30" fill="#FFC0CB"/>
+                            <circle cx="170" cy="160" r="30" fill="#FF69B4"/>
+                            <line x1="150" y1="200" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
+                            <ellipse cx="130" cy="250" rx="20" ry="10" fill="#32CD32" transform="rotate(-20 130 250)"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h4>Romance Bouquet</h4>
+                        <p class="product-desc">Red roses & pink peonies</p>
+                        <div class="product-footer">
+                            <span class="price">$89.00</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #F0FFF0 0%, #E0FFE0 100%);">
+                        <svg viewBox="0 0 300 350" class="product-svg">
+                            <circle cx="150" cy="130" r="55" fill="#98FB98"/>
+                            <circle cx="115" cy="110" r="35" fill="#90EE90"/>
+                            <circle cx="185" cy="110" r="35" fill="#98FB98"/>
+                            <circle cx="150" cy="95" r="30" fill="#3CB371"/>
+                            <circle cx="125" cy="150" r="28" fill="#ADFF2F"/>
+                            <circle cx="175" cy="150" r="28" fill="#90EE90"/>
+                            <line x1="150" y1="185" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
+                            <ellipse cx="125" cy="240" rx="18" ry="8" fill="#32CD32" transform="rotate(-25 125 240)"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h4>Garden Fresh</h4>
+                        <p class="product-desc">White lilies & greenery</p>
+                        <div class="product-footer">
+                            <span class="price">$75.00</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FFF0F5 0%, #FFE4E1 100%);">
+                        <div class="product-badge">New</div>
+                        <svg viewBox="0 0 300 350" class="product-svg">
+                            <circle cx="150" cy="130" r="55" fill="#DDA0DD"/>
+                            <circle cx="115" cy="110" r="35" fill="#DA70D6"/>
+                            <circle cx="185" cy="110" r="35" fill="#DDA0DD"/>
+                            <circle cx="150" cy="95" r="30" fill="#BA55D3"/>
+                            <circle cx="125" cy="150" r="28" fill="#EE82EE"/>
+                            <circle cx="175" cy="150" r="28" fill="#DA70D6"/>
+                            <line x1="150" y1="185" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
+                            <ellipse cx="175" cy="240" rx="18" ry="8" fill="#32CD32" transform="rotate(25 175 240)"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h4>Lavender Dreams</h4>
+                        <p class="product-desc">Purple orchids & roses</p>
+                        <div class="product-footer">
+                            <span class="price">$95.00</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background: linear-gradient(135deg, #FFFAF0 0%, #FFF8DC 100%);">
+                        <svg viewBox="0 0 300 350" class="product-svg">
+                            <circle cx="150" cy="130" r="55" fill="#FFD700"/>
+                            <circle cx="115" cy="110" r="35" fill="#FFA500"/>
+                            <circle cx="185" cy="110" r="35" fill="#FFD700"/>
+                            <circle cx="150" cy="95" r="30" fill="#FF8C00"/>
+                            <circle cx="125" cy="150" r="28" fill="#FFEC8B"/>
+                            <circle cx="175" cy="150" r="28" fill="#FFA500"/>
+                            <line x1="150" y1="185" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
+                            <ellipse cx="125" cy="240" rx="18" ry="8" fill="#32CD32" transform="rotate(-25 125 240)"/>
+                        </svg>
+                    </div>
+                    <div class="product-info">
+                        <h4>Sunshine Mix</h4>
+                        <p class="product-desc">Sunflowers & daisies</p>
+                        <div class="product-footer">
+                            <span class="price">$69.00</span>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Shop With Us -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">The Bloom & Petal Promise</span>
+                <h2>Why Shop <span class="accent">With Us</span></h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Same Day Delivery</h3>
+                    <p>Order by 2pm for same-day delivery. Fresh flowers arrive at their door when it matters most.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>7-Day Freshness Guarantee</h3>
+                    <p>We guarantee your blooms stay fresh for 7 days or we'll replace them free of charge.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </div>
+                    <h3>Handcrafted with Care</h3>
+                    <p>Every arrangement is designed by our expert florists using only the finest seasonal blooms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Personalized Messages</h3>
+                    <p>Add a handwritten note to make your gift extra special and memorable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What Our Customers Say</span>
+                <h2>Loved by <span class="accent">Thousands</span></h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The bouquet was absolutely stunning! My mother was in tears when she received it for her birthday. The flowers lasted over two weeks."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <h5>Sarah Mitchell</h5>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"I've tried many florists but Bloom & Petal is by far the best. The quality is consistently excellent and delivery is always on time."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JC</div>
+                        <div class="author-info">
+                            <h5>James Chen</h5>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"The subscription service is amazing! Every week I get a fresh arrangement that brightens up my home. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EP</div>
+                        <div class="author-info">
+                            <h5>Emma Patel</h5>
+                            <span>Verified Buyer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter / CTA -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <span class="newsletter-tag">Stay in Bloom</span>
+                <h2>Get 15% Off Your First Order</h2>
+                <p>Subscribe to our newsletter for exclusive deals, floral tips, and early access to seasonal collections.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <span class="newsletter-note">No spam, ever. Unsubscribe anytime.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Bloom & Petal</a>
+                    <p>Bringing beauty and joy to your doorstep with handcrafted floral arrangements since 2018.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
+                        </a>
+                        <a href="#" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Pinterest">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#">All Flowers</a></li>
+                        <li><a href="#">Subscriptions</a></li>
+                        <li><a href="#">Occasions</a></li>
+                        <li><a href="#">Plants</a></li>
+                        <li><a href="#">Gifts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Track Order</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bloom & Petal. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
