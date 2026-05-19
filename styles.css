@@ -87,6 +87,19 @@ em {
     letter-spacing: 0.3px;
 }
 
+.announcement-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.announcement-content span:first-child,
+.announcement-content span:last-child {
+    color: var(--color-accent-light);
+    font-size: 0.6rem;
+}
+
 .announcement-bar strong {
     color: var(--color-accent-light);
 }
@@ -445,7 +458,6 @@ em {
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: var(--color-accent);
     color: white;
     display: flex;
     align-items: center;
@@ -461,7 +473,7 @@ em {
 }
 
 .avatar:last-child {
-    background: var(--color-bg-alt);
+    background: var(--color-bg-alt) !important;
     color: var(--color-text-light);
 }
 
@@ -742,6 +754,43 @@ em {
     transform: scale(1.05);
 }
 
+.product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.quick-view-btn {
+    background: var(--color-white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translateY(10px);
+    transition: var(--transition);
+}
+
+.product-card:hover .quick-view-btn {
+    transform: translateY(0);
+}
+
+.quick-view-btn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
 .product-badge {
     position: absolute;
     top: 12px;
@@ -833,6 +882,92 @@ em {
     background: var(--color-success);
     border-color: var(--color-success);
     color: white;
+}
+
+/* How It Works */
+.how-it-works {
+    padding: 100px 0;
+    background: var(--color-bg-warm);
+}
+
+.steps-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 40px 32px;
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+    position: relative;
+    flex: 1;
+    max-width: 280px;
+    transition: var(--transition);
+}
+
+.step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.step-number {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-accent);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.step-icon {
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 20px;
+    background: var(--color-bg-warm);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+}
+
+.step-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.step-card p {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+.step-connector {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-accent-light), var(--color-accent));
+    position: relative;
+}
+
+.step-connector::after {
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: -3px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--color-accent);
+    border-top: 2px solid var(--color-accent);
+    transform: rotate(45deg);
 }
 
 /* Features */
@@ -1252,6 +1387,24 @@ em {
     
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .steps-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .step-connector {
+        width: 2px;
+        height: 40px;
+        background: linear-gradient(180deg, var(--color-accent-light), var(--color-accent));
+    }
+    
+    .step-connector::after {
+        right: -3px;
+        top: auto;
+        bottom: -4px;
+        transform: rotate(135deg);
     }
     
     .footer-grid {

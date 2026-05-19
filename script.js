@@ -47,21 +47,32 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    const quickViewButtons = document.querySelectorAll('.quick-view-btn');
+    quickViewButtons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productName = btn.closest('.product-card').querySelector('h4').textContent;
+            alert(`Quick view: ${productName}\n\nThis would open a product modal in production.`);
+        });
+    });
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
+                setTimeout(() => {
+                    entry.target.classList.add('animate-in');
+                }, index * 100);
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.category-card, .product-card, .feature-card, .testimonial-card').forEach(el => {
+    document.querySelectorAll('.category-card, .product-card, .feature-card, .testimonial-card, .step-card').forEach(el => {
         el.style.opacity = '0';
         el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';

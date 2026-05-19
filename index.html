@@ -10,7 +10,11 @@
 <body>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <p>Free delivery on orders over $75 · Use code <strong>BLOOM15</strong> for 15% off your first order</p>
+        <div class="announcement-content">
+            <span>✦</span>
+            <p>Free delivery on orders over $75 · Use code <strong>BLOOM15</strong> for 15% off your first order</p>
+            <span>✦</span>
+        </div>
     </div>
 
     <!-- Navigation -->
@@ -75,10 +79,10 @@
                 </div>
                 <div class="hero-trust">
                     <div class="trust-avatars">
-                        <span class="avatar">S</span>
-                        <span class="avatar">M</span>
-                        <span class="avatar">J</span>
-                        <span class="avatar">+</span>
+                        <span class="avatar" style="background: linear-gradient(135deg, #FFB6C1, #FF69B4);">S</span>
+                        <span class="avatar" style="background: linear-gradient(135deg, #98FB98, #3CB371);">M</span>
+                        <span class="avatar" style="background: linear-gradient(135deg, #DDA0DD, #BA55D3);">J</span>
+                        <span class="avatar" style="background: linear-gradient(135deg, #FFD700, #FFA500);">+</span>
                     </div>
                     <div class="trust-text">
                         <span class="trust-rating">★★★★★</span>
@@ -277,6 +281,9 @@
                             <line x1="150" y1="200" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
                             <ellipse cx="130" cy="250" rx="20" ry="10" fill="#32CD32" transform="rotate(-20 130 250)"/>
                         </svg>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
                     </div>
                     <div class="product-info">
                         <div class="product-rating">
@@ -308,6 +315,9 @@
                             <line x1="150" y1="185" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
                             <ellipse cx="125" cy="240" rx="18" ry="8" fill="#32CD32" transform="rotate(-25 125 240)"/>
                         </svg>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
                     </div>
                     <div class="product-info">
                         <div class="product-rating">
@@ -340,6 +350,9 @@
                             <line x1="150" y1="185" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
                             <ellipse cx="175" cy="240" rx="18" ry="8" fill="#32CD32" transform="rotate(25 175 240)"/>
                         </svg>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
                     </div>
                     <div class="product-info">
                         <div class="product-rating">
@@ -371,6 +384,9 @@
                             <line x1="150" y1="185" x2="150" y2="280" stroke="#228B22" stroke-width="4"/>
                             <ellipse cx="125" cy="240" rx="18" ry="8" fill="#32CD32" transform="rotate(-25 125 240)"/>
                         </svg>
+                        <div class="product-overlay">
+                            <button class="quick-view-btn">Quick View</button>
+                        </div>
                     </div>
                     <div class="product-info">
                         <div class="product-rating">
@@ -384,6 +400,52 @@
                             <button class="add-to-cart">Add to Cart</button>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Simple & Easy</span>
+                <h2 class="section-title">How It <em>Works</em></h2>
+                <p class="section-description">Sending beautiful flowers has never been easier</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+                        </svg>
+                    </div>
+                    <h3>Choose</h3>
+                    <p>Browse our curated collection and find the perfect arrangement</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3>Personalize</h3>
+                    <p>Add a heartfelt message and select your delivery date</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-card">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+                            <circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
+                        </svg>
+                    </div>
+                    <h3>Deliver</h3>
+                    <p>We handcraft and deliver fresh flowers straight to their door</p>
                 </div>
             </div>
         </div>
