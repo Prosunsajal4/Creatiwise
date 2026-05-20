@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (email) {
                 const btn = newsletterForm.querySelector('.btn');
                 const originalText = btn.textContent;
-                btn.textContent = 'Subscribed!';
+                btn.textContent = '✓ Subscribed!';
                 btn.style.background = 'var(--color-success)';
                 setTimeout(() => {
                     btn.textContent = originalText;
@@ -31,8 +31,17 @@ document.addEventListener('DOMContentLoaded', () => {
     addToCartButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const originalText = btn.textContent;
-            btn.textContent = 'Added!';
+            btn.textContent = '✓ Added';
             btn.classList.add('added');
+            const cartCount = document.querySelector('.cart-count');
+            if (cartCount) {
+                const current = parseInt(cartCount.textContent);
+                cartCount.textContent = current + 1;
+                cartCount.style.transform = 'scale(1.3)';
+                setTimeout(() => {
+                    cartCount.style.transform = 'scale(1)';
+                }, 200);
+            }
             setTimeout(() => {
                 btn.textContent = originalText;
                 btn.classList.remove('added');
@@ -44,6 +53,13 @@ document.addEventListener('DOMContentLoaded', () => {
     wishlistButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             btn.classList.toggle('active');
+            const svg = btn.querySelector('svg');
+            if (btn.classList.contains('active')) {
+                svg.style.transform = 'scale(1.2)';
+                setTimeout(() => {
+                    svg.style.transform = 'scale(1)';
+                }, 200);
+            }
         });
     });
 
@@ -66,23 +82,54 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add('animate-in');
-                }, index * 100);
+                }, index * 80);
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.category-card, .product-card, .feature-card, .testimonial-card, .step-card').forEach(el => {
+    document.querySelectorAll('.category-card, .product-card, .feature-card, .testimonial-card, .step-card, .instagram-item').forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(24px)';
+        el.style.transition = 'opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
         observer.observe(el);
     });
 
-    document.addEventListener('stylechange', () => {
-        document.querySelectorAll('.animate-in').forEach(el => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
+    const bannerObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('banner-visible');
+                bannerObserver.unobserve(entry.target);
+            }
         });
+    }, { threshold: 0.2 });
+
+    const bannerCard = document.querySelector('.banner-card');
+    if (bannerCard) {
+        bannerCard.style.opacity = '0';
+        bannerCard.style.transform = 'scale(0.95)';
+        bannerCard.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+        bannerObserver.observe(bannerCard);
+    }
+
+    document.querySelectorAll('.animate-in').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+    });
+
+    document.querySelectorAll('.banner-visible').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'scale(1)';
+    });
+
+    let lastScroll = 0;
+    const heroVisual = document.querySelector('.hero-visual');
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        if (heroVisual && currentScroll < 600) {
+            const translateY = currentScroll * 0.15;
+            heroVisual.style.transform = `translateY(${translateY}px)`;
+        }
+        lastScroll = currentScroll;
     });
 });

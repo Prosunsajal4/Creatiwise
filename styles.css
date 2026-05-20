@@ -46,6 +46,16 @@ html {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.animate-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.banner-visible {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
 body {
     font-family: var(--font-body);
     color: var(--color-text);
@@ -220,6 +230,7 @@ em {
     align-items: center;
     justify-content: center;
     border: 2px solid var(--color-white);
+    transition: transform 0.2s ease;
 }
 
 /* Buttons */
