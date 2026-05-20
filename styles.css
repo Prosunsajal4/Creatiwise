@@ -658,11 +658,35 @@ em {
     overflow: hidden;
     transition: var(--transition);
     position: relative;
+    border: 1px solid var(--color-border-light);
 }
 
-.product-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-lg);
+.product-card-glass {
+    border: none;
+    box-shadow: var(--shadow-sm);
+}
+
+.product-card-glass .product-glass-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    transform: translateY(100%);
+    transition: var(--transition);
+}
+
+.product-card-glass:hover .product-glass-info {
+    transform: translateY(0);
+}
+
+.product-card-glass:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
 }
 
 .product-wishlist {
